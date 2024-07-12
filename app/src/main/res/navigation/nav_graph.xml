@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:label="navigation">
+
+    <!-- Main Menu Fragment -->
+    <fragment
+        android:id="@+id/mainMenuFragment"
+        android:name="com.example.prmpemobile.fragment.MainMenuFragment"
+        android:label="MainMenuFragment"
+        tools:layout="@layout/fragment_main_menu" />
+
+    <!-- Item Manager Fragment -->
+    <fragment
+        android:id="@+id/itemManagerFragment"
+        android:name="com.example.prmpemobile.fragment.ItemManagerFragment"
+        android:label="ItemManagerFragment"
+        tools:layout="@layout/fragment_item_manager">
+        <!-- Action to navigate to Item Creation Fragment -->
+        <action
+            android:id="@+id/action_itemManagerFragment_to_itemCreationFragment"
+            app:destination="@id/itemCreationFragment" />
+    </fragment>
+
+    <!-- Item Creation Fragment -->
+    <fragment
+        android:id="@+id/itemCreationFragment"
+        android:name="com.example.prmpemobile.fragment.ItemCreationFragment"
+        android:label="ItemCreationFragment"
+        tools:layout="@layout/fragment_item_creation" />
+</navigation>
