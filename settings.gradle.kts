@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "PRMPEMobile"
+rootProject.name = "PRM392_SU24_NJS1701_SE61716"
 include(":app")

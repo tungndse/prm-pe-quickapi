@@ -22,6 +22,20 @@
         android:onClick="openItemManagerPage"
         android:layout_marginBottom="8dp"/>
 
+    <Button
+        android:id="@+id/buttonBookManager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Book Manager"
+        android:onClick="openBookManagerPage"
+        android:layout_marginBottom="8dp"/>
+
+    <Button
+        android:id="@+id/buttonAuthorManager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Manage Authors" />
+
     <!-- Fragment container for replacing with ItemManagerFragment -->
     <FrameLayout
         android:id="@+id/fragment_container"

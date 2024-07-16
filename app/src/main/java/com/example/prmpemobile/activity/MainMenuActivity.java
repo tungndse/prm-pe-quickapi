@@ -11,6 +11,8 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.example.prmpemobile.R;
+import com.example.prmpemobile.fragment.AuthorManagerFragment;
+import com.example.prmpemobile.fragment.BookManagerFragment;
 import com.example.prmpemobile.fragment.ItemManagerFragment;
 import com.example.prmpemobile.model.AccountGetDto;
 import com.google.gson.Gson;
@@ -42,21 +44,40 @@ public class MainMenuActivity extends AppCompatActivity {
             textViewWelcome.setText("Welcome, User");
         }
 
+        // Set up button click listeners
         Button buttonItemManager = findViewById(R.id.buttonItemManager);
         buttonItemManager.setOnClickListener(v -> openItemManagerPage());
+
+        Button buttonBookManager = findViewById(R.id.buttonBookManager);
+        buttonBookManager.setOnClickListener(v -> openBookManagerPage());
+
+        Button buttonAuthorManager = findViewById(R.id.buttonAuthorManager);
+        buttonAuthorManager.setOnClickListener(v -> openAuthorManagerPage());
     }
 
     // Method to open the ItemManagerFragment
     public void openItemManagerPage() {
-        // Create a new instance of ItemManagerFragment
         ItemManagerFragment itemManagerFragment = new ItemManagerFragment();
+        openFragment(itemManagerFragment);
+    }
 
-        // Begin a FragmentTransaction
+    // Method to open the BookManagerFragment
+    public void openBookManagerPage() {
+        BookManagerFragment bookManagerFragment = new BookManagerFragment();
+        openFragment(bookManagerFragment);
+    }
+
+    // Method to open the AuthorManagerFragment
+    public void openAuthorManagerPage() {
+        AuthorManagerFragment authorManagerFragment = new AuthorManagerFragment();
+        openFragment(authorManagerFragment);
+    }
+
+    // Common method to open a fragment
+    private void openFragment(Fragment fragment) {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-
-        // Replace the current fragment with ItemManagerFragment
-        fragmentTransaction.replace(R.id.fragment_container, itemManagerFragment);
+        fragmentTransaction.replace(R.id.fragment_container, fragment);
         fragmentTransaction.addToBackStack(null); // Optional: to allow navigation back
         fragmentTransaction.commit();
     }
