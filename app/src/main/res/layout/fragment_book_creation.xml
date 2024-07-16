@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/editTextBookName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Book Name" />
+
+    <EditText
+        android:id="@+id/editTextBookAuthorId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Author ID"
+        android:layout_below="@id/editTextBookName"
+        android:layout_marginTop="8dp" />
+
+    <EditText
+        android:id="@+id/editTextBookDatePublished"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Date Published (yyyy-MM-dd)"
+        android:layout_below="@id/editTextBookAuthorId"
+        android:layout_marginTop="8dp" />
+
+    <Spinner
+        android:id="@+id/spinnerBookGenre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextBookDatePublished"
+        android:layout_marginTop="8dp" />
+
+    <Button
+        android:id="@+id/buttonSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:layout_below="@id/spinnerBookGenre"
+        android:layout_marginTop="16dp"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:id="@+id/buttonCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

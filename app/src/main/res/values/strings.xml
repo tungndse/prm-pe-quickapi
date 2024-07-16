@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">PRMPEMobile</string>
+    <string-array name="book_genres">
+        <item>FICTION</item>
+        <item>NON_FICTION</item>
+        <item>SCIENCE_FICTION</item>
+        <item>FANTASY</item>
+        <item>ROMANCE</item>
+        <item>THRILLER</item>
+        <item>HORROR</item>
+        <!-- Add more genres as needed -->
+    </string-array>
 </resources>

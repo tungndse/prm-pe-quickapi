@@ -16,7 +16,7 @@ public interface BookService {
     Call<ResponseObject<List<Book>>> getBooks();
 
     @POST("books")
-    Call<ResponseObject<Book>> createBook(@Body BookPostDto bookPostDto);
+    Call<ResponseObject<BookPostDto>> createBook(@Body BookPostDto bookPostDto);
 
     @PUT("books/{id}")
     Call<ResponseObject<Book>> updateBook(@Path("id") Long id, @Body BookPostDto bookPostDto);

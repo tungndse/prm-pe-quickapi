@@ -1,20 +1,16 @@
 package com.example.prmpemobile.model;
 
-
-import java.util.Date;
-
 public class BookPostDto {
 
     private String name;
-    private Date datePublished;
-    private String genre; // Use String for Genre, or you can use Enum if you have it
-    private Long authorId; // Assuming you need to reference an Author
+    private String datePublished;
+    private String genre;
+    private Long authorId;
 
-    // Constructors
     public BookPostDto() {
     }
 
-    public BookPostDto(String name, Date datePublished, String genre, Long authorId) {
+    public BookPostDto(String name, String datePublished, String genre, Long authorId) {
         this.name = name;
         this.datePublished = datePublished;
         this.genre = genre;
@@ -30,11 +26,11 @@ public class BookPostDto {
         this.name = name;
     }
 
-    public Date getDatePublished() {
+    public String getDatePublished() {
         return datePublished;
     }
 
-    public void setDatePublished(Date datePublished) {
+    public void setDatePublished(String datePublished) {
         this.datePublished = datePublished;
     }
 

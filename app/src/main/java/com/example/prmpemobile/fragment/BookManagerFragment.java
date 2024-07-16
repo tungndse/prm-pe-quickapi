@@ -87,7 +87,11 @@ public class BookManagerFragment extends Fragment {
 
     private void goToBookCreation() {
         // Navigate to BookCreationFragment
-
+        BookCreationFragment bookCreationFragment = new BookCreationFragment();
+        getFragmentManager().beginTransaction()
+                .replace(R.id.fragment_container, bookCreationFragment)
+                .addToBackStack(null)
+                .commit();
     }
 
     private void goToMainMenu() {
